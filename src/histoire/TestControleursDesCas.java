@@ -72,7 +72,7 @@ public class TestControleursDesCas {
 		System.out.println("Cas 4 : Prendre etal");
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
 				controlVerifierIdentite, village);
-		int numeroEtal = controlPrendreEtal.prendreEtal("Obelix", "fleur", 5);
+		int numeroEtal = controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
 		System.out.println("Obelix a pris l'étal n°" + numeroEtal);
 
 //		Sortie Console :
@@ -152,7 +152,7 @@ public class TestControleursDesCas {
 		System.out.println("Cas 7 : Afficher Marche");
 		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(
 				village);
-		controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
+		controlPrendreEtal.prendreEtal("Obelix", "fleur", 5);
 		controlPrendreEtal.prendreEtal("Asterix", "poissons", 10);
 		String[] marche = controlAfficherMarche.donnerInfosMarche();
 		for (String etal : marche) {
