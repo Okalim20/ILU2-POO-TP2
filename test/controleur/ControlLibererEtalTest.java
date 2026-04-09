@@ -43,7 +43,8 @@ class ControlLibererEtalTest {
 		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(controlTrouverEtalVendeur);
 		String[] donnees = controlLibererEtal.libererEtal("Vendix");
 		String[] donnesBonnes = {"true","Vendix","fruix","2","0"};
-		assertEquals(donnesBonnes,donnees);
+		assertArrayEquals(donnesBonnes,donnees);
+		assertNull(controlLibererEtal.libererEtal("Bananix"));
 	}
 
 }

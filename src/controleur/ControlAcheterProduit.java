@@ -21,14 +21,22 @@ public class ControlAcheterProduit {
 	public String afficherVendeur(String produit) {
 		StringBuilder vendeurs = new StringBuilder();
 		Gaulois[] gaulois = village.rechercherVendeursProduit(produit);
-		for (int i = 0; i < gaulois.length; i++) {
-			vendeurs.append(i+1);
-			vendeurs.append(" - ");
-			vendeurs.append(gaulois[i].getNom());
-			vendeurs.append("\n");
+		if (gaulois != null) {
+			for (int i = 0; i < gaulois.length; i++) {
+				vendeurs.append(i+1);
+				vendeurs.append(" - ");
+				vendeurs.append(gaulois[i].getNom());
+				vendeurs.append("\n");
+			}
+
 		}
-		
+		else {
+			vendeurs.append("Pas de personnes qui vendent ce produit");
+			
+		}
 		return vendeurs.toString();
+
+		
 		
 	}
 	
@@ -42,13 +50,15 @@ public class ControlAcheterProduit {
 	
 	public String getVendeur(int numero, String produit) {
 		Gaulois[] gaulois = village.rechercherVendeursProduit(produit);
-
+		if (gaulois ==null) {
+			return "Aucun villageois";
+		}
 		return gaulois[numero-1].getNom();
 		
 	}
 	
 	public boolean existeProduit(String produit) {
-		return village.rechercherVendeursProduit(produit)==null;
+		return village.rechercherVendeursProduit(produit)!=null;
 	}
 
 	
