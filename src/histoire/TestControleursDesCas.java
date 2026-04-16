@@ -163,8 +163,8 @@ public class TestControleursDesCas {
 //		Sortie Console :
 //		Cas 7 : Afficher Marche
 //		Obelix
-//		3
-//		menhirs
+//		5
+//		fleur
 //		Asterix
 //		10
 //		poissons
